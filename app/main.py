@@ -4,9 +4,9 @@ import json
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
-from .models import UserPreference, Ingredient, Recipe, Option
+from models.models import UserPreference, Ingredient, Recipe, Option
 
-from storage import add_preference
+from storage import add_multiple_preferences
 
 fastapi_app = FastAPI()
 
@@ -55,9 +55,9 @@ async def get_ingredients():
         Ingredient(name=i["name"], type=i["type"], imageLink=i["imageLink"],) for i in ingredients
     ]
 
-@fastapi_app.post("/preferences/add")
-async def add_preferences(userPreference: UserPreference):
-    add_preference(userPreference.user, userPreference.preference, userPreference.preference_change)
+@fastapi_app.post("/preferences/add", response_model=list[Recipe])
+async def add_preferences(userPreferences: UserPreference):
+    add_multiple_preferences(userPreferences)
     return recipes
 
 @fastapi_app.get("/options", response_model=list[Option])

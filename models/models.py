@@ -1,10 +1,13 @@
 from typing import List
 from pydantic import BaseModel
 
-class UserPreference(BaseModel):
-    user: str
+class PreferenceUpdate(BaseModel):
     preference: str
     preference_change: int
+
+class UserPreference(BaseModel):
+    user: str
+    preference_updates: List[PreferenceUpdate]
 
 class TagEntry(BaseModel):
     name: str
