@@ -35,7 +35,7 @@ def create_new_user(user: str) -> Dict[str, Any]:
     content = {
             "name":user, "preferences": generate_empty_array()
         }
-    preference_collection.instert_one(content)
+    preference_collection.insert_one(content)
     return content
 
 def save_recipe_data(recipe_data: List[Dict]):
