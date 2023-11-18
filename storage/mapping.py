@@ -14,9 +14,9 @@ def collect_tags() -> Set[str]:
         ingredients_list = [i for row in ingredients_list for i in row]
         ingredients_list = [i["name"] for i in ingredients_list]
 
-        allergeens_list = [i['allergeens'] for i in recipes]
-        allergeens_list = [i for row in allergeens_list for i in row]
-        allergeens_list = [i["name"] for i in allergeens_list]
+        allergens_list = [i['allergens'] for i in recipes]
+        allergens_list = [i for row in allergens_list for i in row]
+        allergens_list = [i["name"] for i in allergens_list]
 
         options_list = []
 
@@ -25,7 +25,7 @@ def collect_tags() -> Set[str]:
             options_list.append(entry.second_option.name)
             
 
-        return set(tags_list + ingredients_list + options_list + allergeens_list)
+        return set(tags_list + ingredients_list + options_list + allergens_list)
 
 
 vector_mapping_lst = collect_tags()

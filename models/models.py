@@ -20,7 +20,7 @@ class IngredientEntry(BaseModel):
     name: str
     imageLink: str
 
-class AllergeenEntry(BaseModel):
+class AllergenEntry(BaseModel):
     name: str
 
 class NutritionInfo(BaseModel):
@@ -36,7 +36,7 @@ class Recipe(BaseModel):
     prepTime: int
     image: str
     websiteURL: str
-    allergeens: List[AllergeenEntry]
+    allergens: List[AllergenEntry]
     ingredients: List[IngredientEntry]
     tags: List[TagEntry]
     nutrition: NutritionInfo
