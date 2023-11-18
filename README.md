@@ -11,3 +11,7 @@ This the backend repository for the project "BeppoFresh" by LasagneTUM for the H
 - Generate requirements.txt `pip-compile requirements.in`
 - Install requirements.txt `pip install -r requirements.txt`
 - Run server `uvicorn main:app --reload`
+
+## Test
+
+Run `python3 -m pytest tests`
