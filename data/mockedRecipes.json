@@ -8,6 +8,20 @@
             "prepTime": 25,
             "image": "https://img.hellofresh.com/q_auto/recipes/image/HF_Y23_R37_W44_DE_R4819-1_Main_low-661e95c9.jpg",
             "websiteURL": "https://www.hellofresh.de/recipes/harissa-hahnchen-auf-quinoa-mit-grunen-oliven-64fed0d332e9107c6db8b507",
+            "ingredients": [
+                {
+                    "name": "Harissa"
+                },
+                {
+                    "name": "Chicken"
+                },
+                {
+                    "name": "Quinoa"
+                },
+                {
+                    "name": "Olives"
+                }
+            ],
             "tags": [
                 {
                     "name": "High Protein"
@@ -36,6 +50,20 @@
             "prepTime": 25,
             "image": "https://img.hellofresh.com/q_auto/recipes/image/HF_Y23_R38_W36_DE_R4737-1_Main_low-127700d5.jpg",
             "websiteURL": "https://www.hellofresh.de/recipes/balsamico-linsen-salat-mit-hahnchenbrust-64df2a75552e10127649f25f",
+            "ingredients": [
+                {
+                    "name": "Lentils"
+                },
+                {
+                    "name": "Salad"
+                },
+                {
+                    "name": "Chicken"
+                },
+                {
+                    "name": "Balsamico"
+                }
+            ],
             "tags": [
                 {
                     "name": "High Protein"
@@ -67,6 +95,17 @@
             "prepTime": 35,
             "image": "https://img.hellofresh.com/q_auto/recipes/image/HF_Y23_R39_W49_DE_R4823-1_Main__5low-208db069.jpg",
             "websiteURL": "https://www.hellofresh.de/recipes/perlencouscous-salat-mit-rote-beete-and-pastinakenchips-64e8611440ec4203972faf1b",
+            "ingredients": [
+                {
+                    "name": "Couscous"
+                },
+                {
+                    "name": "Red Beet"
+                },
+                {
+                    "name": "Parsnip"
+                }
+            ],
             "tags": [
                 {
                     "name": "Vegetarian"
@@ -95,6 +134,20 @@
             "prepTime": 20,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/thai-basil-chicken-stir-fry-1695f5e7.jpg",
             "websiteURL": "https://www.example.com/recipes/spicy-thai-basil-chicken-65a1b2c3d4e5f67890g1h2i3",
+            "ingredients": [
+                {
+                    "name": "Thai Basil"
+                },
+                {
+                    "name": "Chili"
+                },
+                {
+                    "name": "Chicken"
+                },
+                {
+                    "name": "Coconut Milk"
+                }
+            ],
             "tags": [
                 {
                     "name": "Spicy"
@@ -126,6 +179,23 @@
             "prepTime": 30,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/crispy-tofu-stir-fry-44859a1c.jpg",
             "websiteURL": "https://www.example.com/recipes/vegetable-stir-fry-tofu-65b2c3d4e5f67890g1h2i3j4",
+            "ingredients": [
+                {
+                    "name": "Soy Sauce"
+                },
+                {
+                    "name": "Paprika"
+                },
+                {
+                    "name": "Onion"
+                },
+                {
+                    "name": "Garlic"
+                },
+                {
+                    "name": "Tofu"
+                }
+            ],
             "tags": [
                 {
                     "name": "Vegan"
@@ -157,6 +227,20 @@
             "prepTime": 45,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/mushroom-risotto-wk11-14d7d4dd.jpg",
             "websiteURL": "https://www.example.com/recipes/mushroom-risotto-65c3d4e5f67890g1h2i3j4k5",
+            "ingredients": [
+                {
+                    "name": "Rice"
+                },
+                {
+                    "name": "Safran"
+                },
+                {
+                    "name": "Mushrooms"
+                },
+                {
+                    "name": "Pepper"
+                }
+            ],
             "tags": [
                 {
                     "name": "Gluten Free"
@@ -182,6 +266,14 @@
             "prepTime": 25,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/salmon-en-papillote-353dd4db.jpg",
             "websiteURL": "https://www.example.com/recipes/grilled-salmon-asparagus-65d4e5f67890g1h2i3j4k5l6",
+            "ingredients": [
+                {
+                    "name": "Salmon"
+                },
+                {
+                    "name": "Asparagus"
+                }
+            ],
             "tags": [
                 {
                     "name": "High Protein"
@@ -207,6 +299,17 @@
             "prepTime": 15,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/5ebcb93dd2f80a637e0e4f5c-349208c5.jpg",
             "websiteURL": "https://www.example.com/recipes/roasted-beet-goat-cheese-salad-65e5f67890g1h2i3j4k5l6m7",
+            "ingredients": [
+                {
+                    "name": "Red Beet"
+                },
+                {
+                    "name": "Goat Cheese"
+                },
+                {
+                    "name": "Salad"
+                }
+            ],
             "tags": [
                 {
                     "name": "Vegetarian"
@@ -232,6 +335,20 @@
             "prepTime": 40,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/tikka-masala-curry-mit-hahnchenbrust-523f0941.jpg",
             "websiteURL": "https://www.example.com/recipes/chicken-tikka-masala-65f67890g1h2i3j4k5l6m7n8",
+            "ingredients": [
+                {
+                    "name": "Chicken"
+                },
+                {
+                    "name": "Garam Masala"
+                },
+                {
+                    "name": "Coconut Milk"
+                },
+                {
+                    "name": "Onion"
+                }
+            ],
             "tags": [
                 {
                     "name": "Spicy"
@@ -263,6 +380,20 @@
             "prepTime": 30,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/59fa0ab6a5ed194691604f02-de240338.jpg",
             "websiteURL": "https://www.example.com/recipes/vegan-black-bean-burger-660g1h2i3j4k5l6m7n8o9p0",
+            "ingredients": [
+                {
+                    "name": "Black Beans"
+                },
+                {
+                    "name": "Burger Buns"
+                },
+                {
+                    "name": "Tomatoes"
+                },
+                {
+                    "name": "Salad"
+                }
+            ],
             "tags": [
                 {
                     "name": "Vegan"
@@ -288,6 +419,17 @@
             "prepTime": 60,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/HF_Y23_R05_W44_UK_R2681-43_MAIN_low-9907545a.jpg",
             "websiteURL": "https://www.example.com/recipes/lemon-herb-roasted-chicken-661h2i3j4k5l6m7n8o9p0q1",
+            "ingredients": [
+                {
+                    "name": "Lemons"
+                },
+                {
+                    "name": "Herbs"
+                },
+                {
+                    "name": "Chicken"
+                }
+            ],
             "tags": [
                 {
                     "name": "Keto"
@@ -316,6 +458,20 @@
             "prepTime": 10,
             "image": "https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_30,w_2600/hellofresh_s3/image/insalata-caprese-mit-mozzarella-kirschtomaten-ae9a829b.jpg",
             "websiteURL": "https://www.example.com/recipes/caprese-salad-balsamic-glaze-662i3j4k5l6m7n8o9p0q1r2",
+            "ingredients": [
+                {
+                    "name": "Mozarella"
+                },
+                {
+                    "name": "Balsamico"
+                },
+                {
+                    "name": "Salad"
+                },
+                {
+                    "name": "Tomatoes"
+                }
+            ],
             "tags": [
                 {
                     "name": "Vegetarian"

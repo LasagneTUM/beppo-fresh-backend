@@ -16,6 +16,9 @@ class UserPreference(BaseModel):
 class TagEntry(BaseModel):
     name: str
 
+class IngredientEntry(BaseModel):
+    name: str
+
 class NutritionInfo(BaseModel):
     energy: int
     calories: int
@@ -29,6 +32,7 @@ class Recipe(BaseModel):
     prepTime: int
     image: str
     websiteURL: str
+    ingredients: List[str]
     tags: List[TagEntry]
     nutrition: NutritionInfo
     vector: List[float]
