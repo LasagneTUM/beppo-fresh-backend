@@ -8,7 +8,7 @@ from .mapping import map_preference_to_idx, generate_empty_array, generate_array
 
 from models.models import UserPreferenceUpdate, Recipe, UserPreference
 
-db_client : MongoClient = MongoClient(f"mongodb+srv://nhuels:{os.getenv('MONGODB_PWD')}@cluster0.xnjrnzh.mongodb.net/?retryWrites=true&w=majority")
+db_client : MongoClient = MongoClient(os.getenv("MONGODB_CONNECTION"))
 
 preference_collection = db_client.beppofresh.user
 recipe_collection = db_client.beppofresh.recipes
