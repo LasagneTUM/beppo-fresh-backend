@@ -19,6 +19,9 @@ class TagEntry(BaseModel):
 class IngredientEntry(BaseModel):
     name: str
 
+class AllergeenEntry(BaseModel):
+    name: str
+
 class NutritionInfo(BaseModel):
     energy: int
     calories: int
@@ -32,6 +35,7 @@ class Recipe(BaseModel):
     prepTime: int
     image: str
     websiteURL: str
+    allergeens: List[AllergeenEntry]
     ingredients: List[IngredientEntry]
     tags: List[TagEntry]
     nutrition: NutritionInfo
