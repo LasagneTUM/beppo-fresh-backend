@@ -28,7 +28,7 @@ def add_multiple_preferences(userPreference: UserPreferenceUpdate):
         f"preferences.{str(map_preference_to_idx(preference))}": pref_value for (preference, pref_value) in unpacked
         }
 
-    preference_collection.update(
+    preference_collection.update_many(
         {"name": userPreference.user},
         {"$inc": inc_instruction}
     )
