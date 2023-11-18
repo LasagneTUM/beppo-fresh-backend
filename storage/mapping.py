@@ -8,7 +8,12 @@ def collect_tags() -> Set[str]:
         tags_list = [i['tags'] for i in recipes]
         tags_list = [i for row in tags_list for i in row]
         tags_list = [i["name"] for i in tags_list]
-        return set(tags_list)
+
+        ingredients_list = [i['ingredients'] for i in recipes]
+        ingredients_list = [i for row in ingredients_list for i in row]
+        ingredients_list = [i["name"] for i in ingredients_list]
+
+        return set(tags_list + ingredients_list)
 
 
 vector_mapping_lst = collect_tags()
