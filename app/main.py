@@ -2,12 +2,25 @@ from typing import Union, List
 import json
 
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 
 from .models import UserPreference, Ingredient, Recipe, Option
 
 from storage import add_preference, get_preference
 
 fastapi_app = FastAPI()
+
+origins = [
+    "*"
+]
+
+fastapi_app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 with open("data/mockedIngredients.json") as f:
     ingredients = json.load(f)["ingredients"]
@@ -44,7 +57,7 @@ async def get_ingredients():
 
 @fastapi_app.post("/preferences/add")
 async def add_preferences(userPreference: UserPreference):
-    add_preference(userPreference.user, userPreference.preference)
+    add_preference(userPreference.user, userPreference.preference, userPreference.preference_change)
     return recipes
 
 @fastapi_app.get("/preferences")

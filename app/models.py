@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class UserPreference(BaseModel):
     user: str
     preference: str
+    preference_change: int
 
 class TagEntry(BaseModel):
     name: str
