@@ -32,7 +32,7 @@ class Recipe(BaseModel):
     prepTime: int
     image: str
     websiteURL: str
-    ingredients: List[str]
+    ingredients: List[IngredientEntry]
     tags: List[TagEntry]
     nutrition: NutritionInfo
     vector: List[float]
