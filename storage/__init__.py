@@ -1,1 +1,1 @@
-from .dictstorage import *
+from mongostorage import *

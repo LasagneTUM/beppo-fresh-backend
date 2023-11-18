@@ -1,11 +1,11 @@
-from typing import Union
+from typing import Union, List
 import json
 
 from fastapi import FastAPI, Request
 
-from .models import UserPreference
+from .models import UserPreference, Ingredient, Recipe, Option
 
-from storage import add_preference, remove_preference, get_preference
+from storage import add_preference, get_preference
 
 fastapi_app = FastAPI()
 
@@ -17,38 +17,34 @@ with open("data/mockedRecipes.json") as f:
     recipes = [i['recipe'] for i in recipes]
 
 options = [
-    ["rice", "noodels"],
-    ["beans", "lentils"],
-    ["crean", "coconut milk"],
-    ["chicken stock", "vegetable stock"],
-    ["gouda", "cheddar"]
+    Option(
+        first_option=Ingredient(
+            name="Teriyakisoße",
+            type="teriyaki-sauce",
+            imageLink="https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient/64da2946d3fa192603728944-4fbfd649.png"
+            ), 
+        second_option=Ingredient(
+            name="Sojasoße",
+            type="soy-sauce",
+            imageLink="https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient/64da2921d3fa19260372871b-bf6f58c5.png"
+            ),
+        ),
 ]
 
-@fastapi_app.get("/")
-async def read_root():
-    return {"Hello": "World"}
-
-@fastapi_app.get("/items/{item_id}")
-async def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
-
-@fastapi_app.get("/recommendations")
+@fastapi_app.get("/recommendations", response_model=List[Recipe])
 async def recommendations(request: Request):
     user = request.headers.get("user")
     return recipes
 
-@fastapi_app.get("/ingredients")
+@fastapi_app.get("/ingredients", response_model=List[Ingredient])
 async def get_ingredients():
-    return ingredients
+    return [
+        Ingredient(name=i["name"], type=i["type"], imageLink=i["imageLink"],) for i in ingredients
+    ]
 
 @fastapi_app.post("/preferences/add")
 async def add_preferences(userPreference: UserPreference):
     add_preference(userPreference.user, userPreference.preference)
-    return recipes
-
-@fastapi_app.post("/preferences/remove")
-async def remove_preferences(userPreference: UserPreference):
-    remove_preference(userPreference.user, userPreference.preference)
     return recipes
 
 @fastapi_app.get("/preferences")
@@ -56,7 +52,7 @@ async def get_preferences(request: Request):
     user = request.headers.get("user")
     return get_preference(user)
 
-@fastapi_app.get("/options")
+@fastapi_app.get("/options", response_model=List[Option])
 async def get_options():
     return options
     

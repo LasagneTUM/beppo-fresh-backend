@@ -28,3 +28,7 @@ class Ingredient(BaseModel):
     name: str
     type: str
     imageLink: str
+
+class Option(BaseModel):
+    first_option: Ingredient
+    second_option: Ingredient
