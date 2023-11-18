@@ -48,4 +48,6 @@ def all_recipes() -> List[Recipe]:
     return [Recipe.model_validate(r) for r in recipe_collection.find()]
 
 def get_recipe_by_id(id: str) -> Recipe:
-    return Recipe.model_validate(recipe_collection.find_one({"_id": id}))
+    dct = recipe_collection.find_one({"id": id})
+    print(dct)
+    return Recipe.model_validate(dct)
