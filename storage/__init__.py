@@ -1,1 +1,1 @@
-from mongostorage import *
+from .mongostorage import *

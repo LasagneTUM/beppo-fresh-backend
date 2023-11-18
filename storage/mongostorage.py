@@ -1,9 +1,12 @@
 from typing import Union, Dict, Any, Optional
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 from pymongo import MongoClient
 from .mapping import map_preference_to_idx, generate_empty_array
 
-db_client : MongoClient = MongoClient("mongodb://localhost:27017/")
+db_client : MongoClient = MongoClient(f"mongodb+srv://nhuels:{os.getenv('MONGODB_PWD')}@cluster0.xnjrnzh.mongodb.net/?retryWrites=true&w=majority")
 
 preference_collection = db_client.beppofresh.user
 recipe_collection = db_client.beppofresh.recipes
