@@ -36,13 +36,16 @@ with open("data/mockedRecipes.json") as f:
     recipes = [i['recipe'] for i in recipes]
     save_recipe_data(recipes)
 
+def get_ranked(user) -> List[Recipe]:
+    user_obj = get_preference_or_create(cast(str, user))
+    recipes = all_recipes()
+    ranked = rank(user_obj, recipes)
+    return ranked
+
 @fastapi_app.get("/recommendations", response_model=list[Recipe])
 async def recommendations(request: Request):
     user = request.headers.get("user")
-    user_obj = get_preference_or_create(cast(str, user))
-    recipes = all_recipes()
-    print(recipes)
-    ranked = rank(user_obj, recipes)
+    ranked = get_ranked(user)
     return ranked
 
 @fastapi_app.get("/ingredients", response_model=list[Ingredient])
@@ -54,7 +57,8 @@ async def get_ingredients():
 @fastapi_app.post("/preferences/add", response_model=list[Recipe])
 async def add_preferences(userPreferences: UserPreferenceUpdate):
     add_multiple_preferences(userPreferences)
-    return recipes
+    user = userPreferences.user
+    return get_ranked(user)
 
 @fastapi_app.get("/options", response_model=list[Option])
 async def get_options():
