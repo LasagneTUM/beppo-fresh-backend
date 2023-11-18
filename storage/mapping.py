@@ -1,14 +1,14 @@
-from typing import List
+from typing import List, Set
 import json
 
-def collect_tags() -> List[str]:
+def collect_tags() -> Set[str]:
     with open("data/mockedRecipes.json") as f:
         recipes = json.load(f)
         recipes = [i['recipe'] for i in recipes]
         tags_list = [i['tags'] for i in recipes]
         tags_list = [i for row in tags_list for i in row]
         tags_list = [i["name"] for i in tags_list]
-        return tags_list
+        return set(tags_list)
 
 
 vector_mapping_lst = collect_tags()

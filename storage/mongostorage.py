@@ -16,7 +16,9 @@ recipe_collection = db_client.beppofresh.recipes
 def get_preference_or_create(user: str) -> UserPreference:
     found = preference_collection.find_one({"name": user})
     if found == None:
-        found =  create_new_user(user)
+        print("Found is none")
+        found = create_new_user(user)
+    print(f"found {found}")
     return UserPreference.model_validate(found)
     
 def add_multiple_preferences(userPreference: UserPreferenceUpdate):
@@ -49,5 +51,4 @@ def all_recipes() -> List[Recipe]:
 
 def get_recipe_by_id(id: str) -> Recipe:
     dct = recipe_collection.find_one({"id": id})
-    print(dct)
     return Recipe.model_validate(dct)

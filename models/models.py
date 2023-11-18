@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Union
 from pydantic import BaseModel
 
 class PreferenceUpdate(BaseModel):
@@ -10,7 +10,7 @@ class UserPreferenceUpdate(BaseModel):
     preference_updates: List[PreferenceUpdate]
 
 class UserPreference(BaseModel):
-    name: str
+    name: Union[str,None]
     preferences: List[float]
 
 class TagEntry(BaseModel):

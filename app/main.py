@@ -89,11 +89,11 @@ options = [
 @fastapi_app.get("/recommendations", response_model=list[Recipe])
 async def recommendations(request: Request):
     user = request.headers.get("user")
-    if user == None:
-        return 400
     user_obj = get_preference_or_create(cast(str, user))
     recipes = all_recipes()
-    return rank(user_obj, recipes)
+    print(recipes)
+    ranked = rank(user_obj, recipes)
+    return ranked
 
 @fastapi_app.get("/ingredients", response_model=list[Ingredient])
 async def get_ingredients():
