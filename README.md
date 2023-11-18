@@ -10,7 +10,7 @@ This the backend repository for the project "BeppoFresh" by LasagneTUM for the H
 - Install pip tools `pip install pip-tools`
 - Generate requirements.txt `pip-compile requirements.in`
 - Install requirements.txt `pip install -r requirements.txt`
-- Run server `uvicorn main:app --reload`
+- Run server `uvicorn app.main:fastapi_app --reload`
 
 ## Test
 
