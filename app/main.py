@@ -68,6 +68,18 @@ options = [
             imageLink="https://cdn3.iconfinder.com/data/icons/food-grade-2/29/food-grade-mild-512.png"
             ),
         ),
+    Option(
+        first_option=Ingredient(
+            name="Mushroom",
+            type="mushroom",
+            imageLink="https://hips.hearstapps.com/hmg-prod/images/types-of-mushrooms-1644507973.jpeg?crop=0.668xw:1.00xh;0.112xw,0&resize=640:*"
+            ), 
+        second_option=Ingredient(
+            name="Salad",
+            type="healthy",
+            imageLink="https://hellolittlehome.com/wp-content/uploads/2022/08/garden-salad-recipe-2.jpg"
+            ),
+        ),
 ]
 
 @fastapi_app.get("/recommendations", response_model=list[Recipe])

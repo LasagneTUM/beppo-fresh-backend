@@ -1,22 +1,17 @@
 from typing import List
+import json
 
-vector_mapping_lst = [
-    "pizza",
-    "pasta",
-    "pesto",
-    "burrito",
-    "cheese",
-    "tomatoes",
-    "zucchini",
-    "eggplant",
-    "eggs",
-    "italian",
-    "mushrooms",
-    "chicken",
-    "beef",
-    "pork",
-    "fish"
-]
+def collect_tags() -> List[str]:
+    with open("data/mockedRecipes.json") as f:
+        recipes = json.load(f)
+        recipes = [i['recipe'] for i in recipes]
+        tags_list = [i['tags'] for i in recipes]
+        tags_list = [i for row in tags_list for i in row]
+        tags_list = [i["name"] for i in tags_list]
+        return tags_list
+
+
+vector_mapping_lst = collect_tags()
 
 vector_mapping = {e:idx for idx, e in enumerate(vector_mapping_lst)}
 
