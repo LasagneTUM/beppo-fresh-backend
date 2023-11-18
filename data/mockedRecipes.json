@@ -5,7 +5,7 @@
             "id": "64fed0d332e9107c6db8b507",
             "name": "Harissa chicken on quinoa with green olives",
             "headline": "This dish produces 50% less CO2e from ingredients than an average HelloFresh recipe",
-            "prepTime": "PT25M",
+            "prepTime": 25,
             "image": "https://img.hellofresh.com/q_auto/recipes/image/HF_Y23_R37_W44_DE_R4819-1_Main_low-661e95c9.jpg",
             "websiteURL": "https://www.hellofresh.de/recipes/harissa-hahnchen-auf-quinoa-mit-grunen-oliven-64fed0d332e9107c6db8b507",
             "tags": [
@@ -30,7 +30,7 @@
             "id": "64df2a75552e10127649f25f",
             "name": "Balsamic lentil salad with chicken breast",
             "headline": "Avocado and plum dressing",
-            "prepTime": "PT25M",
+            "prepTime": 25,
             "image": "https://img.hellofresh.com/q_auto/recipes/image/HF_Y23_R38_W36_DE_R4737-1_Main_low-127700d5.jpg",
             "websiteURL": "https://www.hellofresh.de/recipes/balsamico-linsen-salat-mit-hahnchenbrust-64df2a75552e10127649f25f",
             "tags": [
@@ -58,7 +58,7 @@
             "id": "64e8611440ec4203972faf1b",
             "name": "Perlencouscous-salat with red beet and parsnip chips",
             "headline": "This dish produces 50% less CO2e from ingredients than an average HelloFresh recipe",
-            "prepTime": "PT35M",
+            "prepTime": 35,
             "image": "https://img.hellofresh.com/q_auto/recipes/image/HF_Y23_R39_W49_DE_R4823-1_Main__5low-208db069.jpg",
             "websiteURL": "https://www.hellofresh.de/recipes/perlencouscous-salat-mit-rote-beete-and-pastinakenchips-64e8611440ec4203972faf1b",
             "tags": [
@@ -77,6 +77,231 @@
                 "calories": 875,
                 "carbohydrate": 83.4,
                 "protein": 18
+            }
+        }
+    },
+    {
+        "index": 4,
+        "recipe": {
+            "id": "65a1b2c3d4e5f67890g1h2i3",
+            "name": "Spicy Thai Basil Chicken",
+            "headline": "A quick and flavorful Asian dish",
+            "prepTime": 20,
+            "image": "https://example.com/images/spicy-thai-basil-chicken.jpg",
+            "websiteURL": "https://www.example.com/recipes/spicy-thai-basil-chicken-65a1b2c3d4e5f67890g1h2i3",
+            "tags": [
+                {
+                    "name": "Spicy"
+                },
+                {
+                    "name": "Quick Meal"
+                }
+            ],
+            "nutrition": {
+                "energy": 2345,
+                "calories": 560,
+                "carbohydrate": 45.2,
+                "protein": 35.6
+            }
+        }
+    },
+    {
+        "index": 5,
+        "recipe": {
+            "id": "65b2c3d4e5f67890g1h2i3j4",
+            "name": "Vegetable Stir Fry with Tofu",
+            "headline": "Healthy and vibrant vegan dish",
+            "prepTime": 30,
+            "image": "https://example.com/images/vegetable-stir-fry-tofu.jpg",
+            "websiteURL": "https://www.example.com/recipes/vegetable-stir-fry-tofu-65b2c3d4e5f67890g1h2i3j4",
+            "tags": [
+                {
+                    "name": "Vegan"
+                },
+                {
+                    "name": "Low Fat"
+                }
+            ],
+            "nutrition": {
+                "energy": 1980,
+                "calories": 470,
+                "carbohydrate": 60.3,
+                "protein": 22.5
+            }
+        }
+    },
+    {
+        "index": 6,
+        "recipe": {
+            "id": "65c3d4e5f67890g1h2i3j4k5",
+            "name": "Mushroom Risotto",
+            "headline": "Creamy Italian classic with a twist",
+            "prepTime": 45,
+            "image": "https://example.com/images/mushroom-risotto.jpg",
+            "websiteURL": "https://www.example.com/recipes/mushroom-risotto-65c3d4e5f67890g1h2i3j4k5",
+            "tags": [
+                {
+                    "name": "Gluten Free"
+                },
+                {
+                    "name": "Comfort Food"
+                }
+            ],
+            "nutrition": {
+                "energy": 3120,
+                "calories": 740,
+                "carbohydrate": 85.6,
+                "protein": 25.4
+            }
+        }
+    },
+    {
+        "index": 7,
+        "recipe": {
+            "id": "65d4e5f67890g1h2i3j4k5l6",
+            "name": "Grilled Salmon with Asparagus",
+            "headline": "A light and healthy meal perfect for summer",
+            "prepTime": 25,
+            "image": "https://example.com/images/grilled-salmon-asparagus.jpg",
+            "websiteURL": "https://www.example.com/recipes/grilled-salmon-asparagus-65d4e5f67890g1h2i3j4k5l6",
+            "tags": [
+                {
+                    "name": "High Protein"
+                },
+                {
+                    "name": "Low Carb"
+                }
+            ],
+            "nutrition": {
+                "energy": 2890,
+                "calories": 690,
+                "carbohydrate": 12.7,
+                "protein": 43.8
+            }
+        }
+    },
+    {
+        "index": 8,
+        "recipe": {
+            "id": "65e5f67890g1h2i3j4k5l6m7",
+            "name": "Roasted Beet and Goat Cheese Salad",
+            "headline": "Fresh and colorful salad with a tangy flavor",
+            "prepTime": 15,
+            "image": "https://example.com/images/roasted-beet-goat-cheese-salad.jpg",
+            "websiteURL": "https://www.example.com/recipes/roasted-beet-goat-cheese-salad-65e5f67890g1h2i3j4k5l6m7",
+            "tags": [
+                {
+                    "name": "Vegetarian"
+                },
+                {
+                    "name": "Low Calorie"
+                }
+            ],
+            "nutrition": {
+                "energy": 1650,
+                "calories": 395,
+                "carbohydrate": 30.2,
+                "protein": 14.1
+            }
+        }
+    },
+    {
+        "index": 9,
+        "recipe": {
+            "id": "65f67890g1h2i3j4k5l6m7n8",
+            "name": "Chicken Tikka Masala",
+            "headline": "A beloved Indian curry with rich flavors",
+            "prepTime": 40,
+            "image": "https://example.com/images/chicken-tikka-masala.jpg",
+            "websiteURL": "https://www.example.com/recipes/chicken-tikka-masala-65f67890g1h2i3j4k5l6m7n8",
+            "tags": [
+                {
+                    "name": "Spicy"
+                },
+                {
+                    "name": "Family Friendly"
+                }
+            ],
+            "nutrition": {
+                "energy": 2760,
+                "calories": 660,
+                "carbohydrate": 48.9,
+                "protein": 37.2
+            }
+        }
+    },
+    {
+        "index": 10,
+        "recipe": {
+            "id": "660g1h2i3j4k5l6m7n8o9p0",
+            "name": "Vegan Black Bean Burger",
+            "headline": "A delicious and hearty plant-based burger",
+            "prepTime": 30,
+            "image": "https://example.com/images/vegan-black-bean-burger.jpg",
+            "websiteURL": "https://www.example.com/recipes/vegan-black-bean-burger-660g1h2i3j4k5l6m7n8o9p0",
+            "tags": [
+                {
+                    "name": "Vegan"
+                },
+                {
+                    "name": "High Fiber"
+                }
+            ],
+            "nutrition": {
+                "energy": 2130,
+                "calories": 510,
+                "carbohydrate": 55.3,
+                "protein": 18.7
+            }
+        }
+    },
+    {
+        "index": 11,
+        "recipe": {
+            "id": "661h2i3j4k5l6m7n8o9p0q1",
+            "name": "Lemon Herb Roasted Chicken",
+            "headline": "Juicy and flavorful chicken with a citrus twist",
+            "prepTime": 60,
+            "image": "https://example.com/images/lemon-herb-roasted-chicken.jpg",
+            "websiteURL": "https://www.example.com/recipes/lemon-herb-roasted-chicken-661h2i3j4k5l6m7n8o9p0q1",
+            "tags": [
+                {
+                    "name": "Keto"
+                },
+                {
+                    "name": "Gluten Free"
+                }
+            ],
+            "nutrition": {
+                "energy": 3110,
+                "calories": 740,
+                "carbohydrate": 5.6,
+                "protein": 55.4
+            }
+        }
+    },
+    {
+        "index": 12,
+        "recipe": {
+            "id": "662i3j4k5l6m7n8o9p0q1r2",
+            "name": "Caprese Salad with Balsamic Glaze",
+            "headline": "A classic Italian salad, perfect as a starter",
+            "prepTime": 10,
+            "image": "https://example.com/images/caprese-salad-balsamic-glaze.jpg",
+            "websiteURL": "https://www.example.com/recipes/caprese-salad-balsamic-glaze-662i3j4k5l6m7n8o9p0q1r2",
+            "tags": [
+                {
+                    "name": "Vegetarian"
+                },
+                {
+                    "name": "Low Carb"
+                }
+            ],
+            "nutrition": {
+                "energy": 1234,
+                "calories": 295,
+                "carbohydrate": 9.2,
+                "protein": 12.5
             }
         }
     }
