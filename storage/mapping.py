@@ -1,5 +1,6 @@
 from typing import List, Set
 import json
+from data.options import options
 
 def collect_tags() -> Set[str]:
     with open("data/mockedRecipes.json") as f:
@@ -13,7 +14,14 @@ def collect_tags() -> Set[str]:
         ingredients_list = [i for row in ingredients_list for i in row]
         ingredients_list = [i["name"] for i in ingredients_list]
 
-        return set(tags_list + ingredients_list)
+        options_list = []
+
+        for entry in options:
+            options_list.append(entry.first_option.name)
+            options_list.append(entry.second_option.name)
+            
+
+        return set(tags_list + ingredients_list + options_list)
 
 
 vector_mapping_lst = collect_tags()
