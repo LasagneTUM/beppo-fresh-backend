@@ -15,3 +15,7 @@ This the backend repository for the project "BeppoFresh" by LasagneTUM for the H
 ## Test
 
 Run `python3 -m pytest tests`
+
+## Type checking
+
+Run `python3 -m mypy -p app`
