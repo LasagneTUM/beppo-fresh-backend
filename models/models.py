@@ -3,11 +3,15 @@ from pydantic import BaseModel
 
 class PreferenceUpdate(BaseModel):
     preference: str
-    preference_change: int
+    preference_change: float
 
-class UserPreference(BaseModel):
+class UserPreferenceUpdate(BaseModel):
     user: str
     preference_updates: List[PreferenceUpdate]
+
+class UserPreference(BaseModel):
+    name: str
+    preferences: List[float]
 
 class TagEntry(BaseModel):
     name: str
@@ -27,6 +31,7 @@ class Recipe(BaseModel):
     websiteURL: str
     tags: List[TagEntry]
     nutrition: NutritionInfo
+    vector: List[float]
 
 class Ingredient(BaseModel):
     name: str

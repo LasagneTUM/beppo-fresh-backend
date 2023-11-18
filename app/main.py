@@ -1,12 +1,14 @@
-from typing import Union, List
+from typing import Union, List, cast
 import json
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
-from models.models import UserPreference, Ingredient, Recipe, Option
+from models.models import UserPreferenceUpdate, Ingredient, Recipe, Option
 
-from storage import add_multiple_preferences
+from storage import add_multiple_preferences, get_preference_or_create, all_recipes
+
+from .ranking import rank
 
 fastapi_app = FastAPI()
 
@@ -47,7 +49,11 @@ options = [
 @fastapi_app.get("/recommendations", response_model=list[Recipe])
 async def recommendations(request: Request):
     user = request.headers.get("user")
-    return recipes
+    if user == None:
+        return 400
+    user_obj = get_preference_or_create(cast(str, user))
+    recipes = all_recipes()
+    return rank(user_obj, recipes)
 
 @fastapi_app.get("/ingredients", response_model=list[Ingredient])
 async def get_ingredients():
@@ -56,7 +62,7 @@ async def get_ingredients():
     ]
 
 @fastapi_app.post("/preferences/add", response_model=list[Recipe])
-async def add_preferences(userPreferences: UserPreference):
+async def add_preferences(userPreferences: UserPreferenceUpdate):
     add_multiple_preferences(userPreferences)
     return recipes
 

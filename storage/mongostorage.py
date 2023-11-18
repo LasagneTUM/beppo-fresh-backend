@@ -1,26 +1,25 @@
-from typing import Union, Dict, Any, Optional
+from typing import Union, Dict, Any, Optional, List
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
 from pymongo import MongoClient
-from .mapping import map_preference_to_idx, generate_empty_array
+from .mapping import map_preference_to_idx, generate_empty_array, generate_array_for_taglist
 
-from models.models import UserPreference
+from models.models import UserPreferenceUpdate, Recipe, UserPreference
 
 db_client : MongoClient = MongoClient(f"mongodb+srv://nhuels:{os.getenv('MONGODB_PWD')}@cluster0.xnjrnzh.mongodb.net/?retryWrites=true&w=majority")
 
 preference_collection = db_client.beppofresh.user
 recipe_collection = db_client.beppofresh.recipes
 
-def get_preference_or_create(user: str) -> Optional[Dict[str, Any]]:
+def get_preference_or_create(user: str) -> UserPreference:
     found = preference_collection.find_one({"name": user})
     if found == None:
-        return create_new_user(user)
-    else:
-        return found
+        found =  create_new_user(user)
+    return UserPreference.model_validate(found)
     
-def add_multiple_preferences(userPreference: UserPreference):
+def add_multiple_preferences(userPreference: UserPreferenceUpdate):
     get_preference_or_create(userPreference.user)
     unpacked = [(update.preference, update.preference_change) for update in userPreference.preference_updates]
     inc_instruction = {
@@ -32,9 +31,18 @@ def add_multiple_preferences(userPreference: UserPreference):
         {"$inc": inc_instruction}
     )
 
-def create_new_user(user: str):
+def create_new_user(user: str) -> Dict[str, Any]:
     content = {
             "name":user, "preferences": generate_empty_array()
         }
     preference_collection.instert_one(content)
     return content
+
+def save_recipe_data(recipe_data: List[Dict]):
+    for recipe in recipe_data:
+        vector = generate_array_for_taglist([t["name"] for t in recipe["tags"]])
+        recipe['vector'] = vector
+    recipe_collection.insert_many(recipe_data)
+
+def all_recipes() -> List[Recipe]:
+    return [Recipe.model_validate(r) for r in recipe_collection.find()]

@@ -5,3 +5,4 @@ pytest
 mypy
 pymongo
 python-dotenv
+scikit-learn
