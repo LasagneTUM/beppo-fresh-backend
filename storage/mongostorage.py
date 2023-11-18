@@ -11,18 +11,24 @@ db_client : MongoClient = MongoClient(f"mongodb+srv://nhuels:{os.getenv('MONGODB
 preference_collection = db_client.beppofresh.user
 recipe_collection = db_client.beppofresh.recipes
 
-def get_preference(user: Union[str,None]) -> Optional[Dict[str, Any]]:
-    return preference_collection.find_one({"name": user})
+def get_preference_or_create(user: str) -> Optional[Dict[str, Any]]:
+    found = preference_collection.find_one({"name": user})
+    if found == None:
+        return create_new_user(user)
+    else:
+        return found
 
 def add_preference(user: str, preference: str, pref_value: int):
-    found_user =  get_preference(user)
-    if found_user != None:
-        preference_collection.update(
-            {"name": user},
-            {"$inc": {
-                f"preferences.{str(map_preference_to_idx(preference))}": pref_value}}
-        )
-    else:
-        preference_collection.instert_one({
+    get_preference_or_create(user)
+    preference_collection.update(
+        {"name": user},
+        {"$inc": {
+            f"preferences.{str(map_preference_to_idx(preference))}": pref_value}}
+    )
+
+def create_new_user(user: str):
+    content = {
             "name":user, "preferences": generate_empty_array()
-        })
+        }
+    preference_collection.instert_one(content)
+    return content

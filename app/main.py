@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .models import UserPreference, Ingredient, Recipe, Option
 
-from storage import add_preference, get_preference
+from storage import add_preference
 
 fastapi_app = FastAPI()
 
@@ -44,12 +44,12 @@ options = [
         ),
 ]
 
-@fastapi_app.get("/recommendations", response_model=List[Recipe])
+@fastapi_app.get("/recommendations", response_model=list[Recipe])
 async def recommendations(request: Request):
     user = request.headers.get("user")
     return recipes
 
-@fastapi_app.get("/ingredients", response_model=List[Ingredient])
+@fastapi_app.get("/ingredients", response_model=list[Ingredient])
 async def get_ingredients():
     return [
         Ingredient(name=i["name"], type=i["type"], imageLink=i["imageLink"],) for i in ingredients
@@ -60,12 +60,7 @@ async def add_preferences(userPreference: UserPreference):
     add_preference(userPreference.user, userPreference.preference, userPreference.preference_change)
     return recipes
 
-@fastapi_app.get("/preferences")
-async def get_preferences(request: Request):
-    user = request.headers.get("user")
-    return get_preference(user)
-
-@fastapi_app.get("/options", response_model=List[Option])
+@fastapi_app.get("/options", response_model=list[Option])
 async def get_options():
     return options
     
