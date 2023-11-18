@@ -29,7 +29,7 @@ options = [
         first_option=Ingredient(
             name="Spicy",
             type="exotic",
-            imageLink="https://www.google.de/url?sa=i&url=https%3A%2F%2Fwww.popularmechanics.com%2Fscience%2Fhealth%2Fa45140555%2Fone-chip-challenge-spicy-food-danger%2F&psig=AOvVaw2Xq6pjg1OqRO05AaE-tF1M&ust=1700419800989000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMD8vsmbzoIDFQAAAAAdAAAAABAD"
+            imageLink="https://images.pexels.com/photos/11659382/pexels-photo-11659382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             ), 
         second_option=Ingredient(
             name="Not spicy",
@@ -47,6 +47,30 @@ options = [
             name="Salad",
             type="healthy",
             imageLink="https://hellolittlehome.com/wp-content/uploads/2022/08/garden-salad-recipe-2.jpg"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Hot",
+            type="hot",
+            imageLink="https://images.pexels.com/photos/672636/pexels-photo-672636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ), 
+        second_option=Ingredient(
+            name="Cold",
+            type="cold",
+            imageLink="https://images.pexels.com/photos/10902065/pexels-photo-10902065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Vegetarian",
+            type="vegetarian",
+            imageLink="https://images.pexels.com/photos/4871111/pexels-photo-4871111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ), 
+        second_option=Ingredient(
+            name="Chicken",
+            type="meat",
+            imageLink="https://www.aldelis.com/wp-content/uploads/2017/10/beneficios-pollo.jpg"
             ),
         ),
 ]

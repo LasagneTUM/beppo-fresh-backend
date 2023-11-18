@@ -31,6 +31,9 @@
                 },
                 {
                     "name": "Chicken"
+                },
+                {
+                    "name": "Hot"
                 }
             ],
             "nutrition": {
@@ -76,6 +79,9 @@
                 },
                 {
                     "name": "Chicken"
+                }, 
+                {
+                    "name": "Cold"
                 }
             ],
             "nutrition": {
@@ -115,6 +121,9 @@
                 },
                 {
                     "name": "Family Friendly"
+                }, 
+                {
+                    "name": "Cold"
                 }
             ],
             "nutrition": {
@@ -160,6 +169,9 @@
                 },
                 {
                     "name": "Thai"
+                }, 
+                {
+                    "name": "Hot"
                 }
             ],
             "nutrition": {
