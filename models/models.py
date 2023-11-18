@@ -18,6 +18,7 @@ class TagEntry(BaseModel):
 
 class IngredientEntry(BaseModel):
     name: str
+    imageLink: str
 
 class AllergeenEntry(BaseModel):
     name: str
