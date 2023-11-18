@@ -34,14 +34,38 @@ with open("data/mockedRecipes.json") as f:
 options = [
     Option(
         first_option=Ingredient(
-            name="Teriyakisoße",
-            type="teriyaki-sauce",
-            imageLink="https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient/64da2946d3fa192603728944-4fbfd649.png"
+            name="Chicken",
+            type="meat",
+            imageLink="https://www.aldelis.com/wp-content/uploads/2017/10/beneficios-pollo.jpg"
             ), 
         second_option=Ingredient(
-            name="Sojasoße",
-            type="soy-sauce",
-            imageLink="https://d3hvwccx09j84u.cloudfront.net/200,200/ingredient/64da2921d3fa19260372871b-bf6f58c5.png"
+            name="Tofu",
+            type="tofu",
+            imageLink="https://www.fitforfun.de/files/images/201706/1/geschnittener-tofu-in-schuessel,251508_1x1_xl.jpg"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Indian",
+            type="exotic",
+            imageLink="https://i.etsystatic.com/33245026/r/il/1f9336/3612599268/il_570xN.3612599268_ccik.jpg"
+            ), 
+        second_option=Ingredient(
+            name="Thai",
+            type="exotic",
+            imageLink="https://i.etsystatic.com/33245026/r/il/f13729/3660574045/il_570xN.3660574045_2s5z.jpg"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Spicy",
+            type="exotic",
+            imageLink="https://www.google.de/url?sa=i&url=https%3A%2F%2Fwww.popularmechanics.com%2Fscience%2Fhealth%2Fa45140555%2Fone-chip-challenge-spicy-food-danger%2F&psig=AOvVaw2Xq6pjg1OqRO05AaE-tF1M&ust=1700419800989000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMD8vsmbzoIDFQAAAAAdAAAAABAD"
+            ), 
+        second_option=Ingredient(
+            name="Not spicy",
+            type="not exotic",
+            imageLink="https://cdn3.iconfinder.com/data/icons/food-grade-2/29/food-grade-mild-512.png"
             ),
         ),
 ]

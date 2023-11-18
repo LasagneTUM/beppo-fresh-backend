@@ -14,6 +14,9 @@
                 },
                 {
                     "name": "Under 650 Calories"
+                },
+                {
+                    "name": "Chicken"
                 }
             ],
             "nutrition": {
@@ -42,6 +45,9 @@
                 },
                 {
                     "name": "Low Carb"
+                },
+                {
+                    "name": "Chicken"
                 }
             ],
             "nutrition": {
@@ -95,6 +101,12 @@
                 },
                 {
                     "name": "Quick Meal"
+                },
+                {
+                    "name": "Chicken"
+                },
+                {
+                    "name": "Thai"
                 }
             ],
             "nutrition": {
@@ -120,6 +132,12 @@
                 },
                 {
                     "name": "Low Fat"
+                },
+                {
+                    "name": "Tofu"
+                },
+                {
+                    "name": "Thai"
                 }
             ],
             "nutrition": {
@@ -220,6 +238,12 @@
                 },
                 {
                     "name": "Family Friendly"
+                },
+                {
+                    "name": "Chicken"
+                },
+                {
+                    "name": "Indian"
                 }
             ],
             "nutrition": {
@@ -270,6 +294,9 @@
                 },
                 {
                     "name": "Gluten Free"
+                },
+                {
+                    "name": "Chicken"
                 }
             ],
             "nutrition": {
