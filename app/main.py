@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from models.models import UserPreferenceUpdate, Ingredient, Recipe, Option
 
-from storage import add_multiple_preferences, get_preference_or_create, all_recipes, save_recipe_data, recipe_collection, preference_collection
+from storage import add_multiple_preferences, get_preference_or_create, all_recipes, save_recipe_data, recipe_collection, preference_collection, get_recipe_by_id
 
 from .ranking import rank
 
@@ -109,5 +109,10 @@ async def add_preferences(userPreferences: UserPreferenceUpdate):
 @fastapi_app.get("/options", response_model=list[Option])
 async def get_options():
     return options
+
+@fastapi_app.get("/recipe/{recipe_id}", response_model=Recipe)
+async def get_recipe(recipe_id: str):
+    return get_recipe_by_id(recipe_id)
+
     
 
