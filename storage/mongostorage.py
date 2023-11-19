@@ -42,7 +42,8 @@ def create_new_user(user: str) -> Dict[str, Any]:
 
 def save_recipe_data(recipe_data: List[Dict]):
     for recipe in recipe_data:
-        vector = generate_array_for_taglist([t["name"] for t in recipe["tags"]])
+        combined_tags = set([t["name"] for t in recipe["tags"]] + [t["name"] for t in recipe["ingredients"]])
+        vector = generate_array_for_taglist(combined_tags)
         recipe['vector'] = vector
     recipe_collection.insert_many(recipe_data)
 

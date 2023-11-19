@@ -38,7 +38,7 @@ def map_preference_to_idx(preference: str) -> int:
 def generate_empty_array() -> List[float]:
     return [0 for _ in vector_mapping.keys()]
 
-def generate_array_for_taglist(tags: List[str]) -> List[float]:
+def generate_array_for_taglist(tags: set[str]) -> List[float]:
     lst : List[float] = []
     for i in vector_mapping_lst:
         if i in tags:

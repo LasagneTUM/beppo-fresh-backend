@@ -4,8 +4,8 @@ from models.models import UserPreference, Recipe
 
 from sklearn.metrics.pairwise import cosine_similarity
 
-def calculate_score(lst1: List[float], lst2: List[float]) -> float:
-    return cosine_similarity(lst1, lst2)
+def calculate_score(lst1: List[List[float]], lst2: List[List[float]]) -> float:
+    return cosine_similarity(lst1, lst2)[0][0]
 
 def rank(user: UserPreference, recipes: List[Recipe]) -> List[Recipe]:
     ranked : List[Tuple[Recipe, float]] = []
