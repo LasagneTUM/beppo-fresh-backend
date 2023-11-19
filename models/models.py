@@ -24,10 +24,10 @@ class AllergenEntry(BaseModel):
     name: str
 
 class NutritionInfo(BaseModel):
-    energy: int
-    calories: int
-    carbohydrate: float
-    protein: float
+    energy: int = -1
+    calories: int = -1
+    carbohydrate: float = -1
+    protein: float = -1
 
 class Recipe(BaseModel):
     id: str
