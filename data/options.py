@@ -90,6 +90,18 @@ new_options = [
         ),
     Option(
         first_option=Ingredient(
+            name="Cinnamon",
+            type="Cinnamon",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a35e54dab71636c8b456b.png"
+            ), 
+        second_option=Ingredient(
+            name="Garlic",
+            type="Garlic",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/554a363df8b25e1d268b456b-15867d90.png"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
             name="Chickpeas",
             type="Chickpeas",
             imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a4024f8b25e1d268b4570.png"
@@ -169,7 +181,19 @@ new_options = [
         second_option=Ingredient(
             name="Orange",
             type="Orange",
-            imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a4033f8b25ed7288b456e.png"
+            imageLink="https://img.hellofresh.com/faktorq_auto/recipes/image/554a4033f8b25ed7288b456e.png"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Mexican Cheese Blend",
+            type="Mexican Cheese Blend",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/5afc835e30006c4576393862-ffdf37af.jpg"
+            ), 
+        second_option=Ingredient(
+            name="Belgian Waffle",
+            type="Belgian Waffle",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/62cdf229bab594ff4e0b3b94-77140223.jpg"
             ),
         ),
     Option(
