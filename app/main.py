@@ -11,9 +11,10 @@ from data.options import options
 
 from .ranking import rank
 import logging
-import string 
+import string
 import random
-import time 
+import time
+import sys
 
 fastapi_app = FastAPI()
 
@@ -40,6 +41,7 @@ with open("data/mockedRecipes.json", encoding="utf-8") as f:
     recipes = [i['recipe'] for i in recipes]
     save_recipe_data(recipes)
 
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 @fastapi_app.middleware("http")
