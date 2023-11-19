@@ -1,6 +1,6 @@
 from models.models import Option, Ingredient
 
-options = [
+old_options = [
     Option(
         first_option=Ingredient(
             name="Chicken",
@@ -74,3 +74,129 @@ options = [
             ),
         ),
 ]
+
+new_options = [
+    Option(
+        first_option=Ingredient(
+            name="Vegan",
+            type="Vegan",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/vegan-southwest-veggie-sandos-6957f718.jpg"
+            ), 
+        second_option=Ingredient(
+            name="Bacon",
+            type="Bacon",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/58b9ac35043c3c4cc663f0b3-b5c9e4a8.png"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Chickpeas",
+            type="Chickpeas",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a4024f8b25e1d268b4570.png"
+            ), 
+        second_option=Ingredient(
+            name="Shellfish",
+            type="Shellfish",
+            imageLink="https://images.pexels.com/photos/7636375/pexels-photo-7636375.jpeg?auto=compress&cs=tinysrgb&w=600"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Hot Sauce",
+            type="Hot Sauce",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/55670feafd2cb911068b4567-46f2f18b.png"
+            ), 
+        second_option=Ingredient(
+            name="Creamy Balsamic Dressing",
+            type="Creamy Balsamic Dressing",
+            imageLink="https://images.pexels.com/photos/6493568/pexels-photo-6493568.jpeg?auto=compress&cs=tinysrgb&w=600"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Pulled Pork",
+            type="Pulled Pork",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/5a3ae989c288004c1b048582-81479546.png"
+            ), 
+        second_option=Ingredient(
+            name="Vegan",
+            type="Vegan",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/vegan-southwest-veggie-sandos-6957f718.jpg"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Black Beans",
+            type="Black Beans",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/5550dd6bfd2cb92b1a8b4567.png"
+            ), 
+        second_option=Ingredient(
+            name="Jasmine Rice",
+            type="Jasmine Rice",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/55b7845df8b25ed9088b4567.png"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Pulled Pork",
+            type="Pulled Pork",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/5a3ae989c288004c1b048582-81479546.png"
+            ), 
+        second_option=Ingredient(
+            name="Chicken Cutlets",
+            type="Chicken Cutlets",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/59c2b202c288007f56514711-21c62ba7.png"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Spicy",
+            type="Spicy",
+            imageLink="https://images.pexels.com/photos/11659382/pexels-photo-11659382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            ), 
+        second_option=Ingredient(
+            name="Milk",
+            type="Milk",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/64a4fb113223226bfd2b8b2f-5e7aee28.jpeg"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Apple",
+            type="Apple",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a3a7cf8b25ed7288b456b.png"
+            ), 
+        second_option=Ingredient(
+            name="Orange",
+            type="Orange",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a4033f8b25ed7288b456e.png"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Apple",
+            type="Apple",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a3a7cf8b25ed7288b456b.png"
+            ), 
+        second_option=Ingredient(
+            name="Orange",
+            type="Orange",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/image/554a4033f8b25ed7288b456e.png"
+            ),
+        ),
+    Option(
+        first_option=Ingredient(
+            name="Jalapeño",
+            type="Jalapeño",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/55561153fd2cb9521f8b4568-d95ff4b4.png"
+            ), 
+        second_option=Ingredient(
+            name="Sweet Soy Glaze",
+            type="Sweet Soy Glaze",
+            imageLink="https://img.hellofresh.com/q_auto/recipes/ingredient/5e04ea2c1413cb766f30181c-6c56bd3d.png"
+            ),
+        ),
+]
+
+
+options = new_options
