@@ -10,6 +10,7 @@ from storage import add_multiple_preferences, get_preference_or_create, all_reci
 from data.options import options
 
 from .ranking import rank
+import logging
 
 fastapi_app = FastAPI()
 
