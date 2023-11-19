@@ -3,7 +3,7 @@ import json
 from data.options import options
 
 def collect_tags() -> Set[str]:
-    with open("data/mockedRecipes.json") as f:
+    with open("data/mockedRecipes.json", encoding="utf-8") as f:
         recipes = json.load(f)
         recipes = [i['recipe'] for i in recipes]
         tags_list = [i['tags'] for i in recipes]

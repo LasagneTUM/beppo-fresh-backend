@@ -32,10 +32,10 @@ fastapi_app.add_middleware(
 preference_collection.delete_many({})
 recipe_collection.delete_many({})
 
-with open("data/mockedIngredients.json") as f:
+with open("data/mockedIngredients.json", encoding="utf-8") as f:
     ingredients = json.load(f)["ingredients"]
 
-with open("data/mockedRecipes.json") as f:
+with open("data/mockedRecipes.json", encoding="utf-8") as f:
     recipes = json.load(f)
     recipes = [i['recipe'] for i in recipes]
     save_recipe_data(recipes)
