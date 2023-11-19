@@ -35,7 +35,6 @@ class Recipe(BaseModel):
     headline: str
     prepTime: int
     image: str
-    websiteURL: str
     allergens: List[AllergenEntry]
     ingredients: List[IngredientEntry]
     tags: List[TagEntry]
